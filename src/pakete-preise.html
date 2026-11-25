@@ -1,60 +1,58 @@
 <section class="page-hero gridbg">
   <div class="wrap">
-    <h1>Pakete und Preise. <em>Transparent.</em></h1>
-    <p class="lead">Das Grundmodell ist ein Monatsabo: Einrichtung, Hosting und laufende Pflege in einem Preis. Dazu gibt es ein Einstiegsangebot für die KI-Beratung. Stellen Sie sich Ihr Paket zusammen.</p>
-    <p class="stack"><mark class="todo">[TODO] Alle Preise auf dieser Seite sind Platzhalter und müssen ersetzt werden (Zahlen stehen als data-Attribute im HTML dieser Seite).</mark></p>
+    <h1>Preise. <em>Transparent und nach Bedarf.</em></h1>
+    <p class="lead">Jeder Betrieb ist anders. Deshalb nenne ich Ihnen hier Richtwerte und was den Preis bestimmt. Den genauen Preis bekommen Sie nach den Workshops schriftlich.</p>
+    <p class="stack"><mark class="todo">[TODO] Alle Preise auf dieser Seite sind Richtwerte beziehungsweise Vorschläge und müssen von Ihnen bestätigt werden.</mark></p>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="websites">
   <div class="wrap">
-    <form class="config" data-config>
-      <div>
-        <fieldset>
-          <legend>1. Website</legend>
-          <p class="hint">Im Abo enthalten sind Einrichtung, Hosting und laufende Pflege. Wählen Sie den Umfang.</p>
-          <div class="opts">
-            <div class="opt-wrap"><input type="radio" name="website" id="w-ohne" value="ohne" data-label="Ohne Website-Abo"><label class="opt" for="w-ohne"><b>Ohne Website</b><small>Sie haben bereits eine Website oder brauchen nur KI-Beratung.</small><span class="p">0 €</span></label></div>
-            <div class="opt-wrap"><input type="radio" name="website" id="w-kompakt" value="kompakt" data-monat="49" data-label="Website-Abo Kompakt"><label class="opt" for="w-kompakt"><b>Kompakt</b><small>Bis zu 5 Seiten, Kontaktformular, Hosting und Pflege.</small><span class="p">49 €<small>pro Monat</small></span></label></div>
-            <div class="opt-wrap"><input type="radio" name="website" id="w-standard" value="standard" data-monat="79" data-label="Website-Abo Standard" checked><label class="opt" for="w-standard"><b>Standard</b><small>Bis zu 10 Seiten, regelmäßige Änderungen inklusive.</small><span class="p">79 €<small>pro Monat</small></span></label></div>
-            <div class="opt-wrap"><input type="radio" name="website" id="w-erweitert" value="erweitert" data-monat="129" data-label="Website-Abo Erweitert"><label class="opt" for="w-erweitert"><b>Erweitert</b><small>Bis zu 20 Seiten, mehr Änderungen, bevorzugte Bearbeitung.</small><span class="p">129 €<small>pro Monat</small></span></label></div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>2. Bausteine für KI</legend>
-          <p class="hint">Beides lässt sich einzeln oder zusammen wählen.</p>
-          <div class="opts check">
-            <div class="opt-wrap"><input type="checkbox" id="b-funktion" value="ki-funktion" data-monat="39" data-label="KI-Funktion für die Website"><label class="opt" for="b-funktion"><b>KI-Funktion für die Website</b><small>Chat-Assistent oder automatisierte Anfragen, laufend betreut.</small><span class="p">39 €<small>pro Monat</small></span></label></div>
-            <div class="opt-wrap"><input type="checkbox" id="b-beratung" value="ki-beratung" data-einmal="290" data-label="KI-Einstiegsberatung"><label class="opt" for="b-beratung"><b>KI-Einstiegsberatung</b><small>Potenzialanalyse, Empfehlung und erste Einführung der Werkzeuge.</small><span class="p">290 €<small>einmalig</small></span></label></div>
-          </div>
-        </fieldset>
-      </div>
-
-      <aside class="summary" aria-labelledby="summe-titel">
-        <h2 id="summe-titel">Ihre Auswahl</h2>
-        <div aria-live="polite" aria-atomic="true">
-          <dl>
-            <div><dt>Monatlich</dt><dd data-sum-monat>0 €</dd></div>
-            <div><dt>Einmalig</dt><dd data-sum-einmal>0 €</dd></div>
-          </dl>
-        </div>
-        <ul class="chosen" data-chosen></ul>
-        <a class="btn btn-primary" href="/kontakt" data-config-cta>Mit dieser Auswahl anfragen</a>
-        <p class="fine">Unverbindliche Richtwerte. Den genauen Umfang und den Preis legen wir im Erstgespräch fest. Kein Ausweis der Umsatzsteuer gemäß § 19 UStG (Kleinunternehmerregelung). <mark class="todo">[TODO] Wortlaut „netto“ rechtlich prüfen</mark></p>
-      </aside>
-    </form>
+    <div class="section-head">
+      <h2>Websites im Monatsabo.</h2>
+      <p class="lead">Hosting, Pflege und laufende Aktualisierungen laufen im Abo. Einmalig kommt der Aufwand fürs Aufsetzen dazu.</p>
+    </div>
+    <dl class="price-list">
+      <div><dt>Monatliche Gebühr<small>Hosting, Pflege und Aktualisierungen</small></dt><dd>ab etwa 75 bis 100 €<small>pro Monat</small></dd></div>
+      <div><dt>Einfache statische Website mit Kontaktformular<small>typischer Fall</small></dt><dd>eher etwa 150 €<small>pro Monat</small></dd></div>
+      <div><dt>Aufbau und Einrichtung<small>einmaliger Aufwand, je nach Betrieb und Wünschen</small></dt><dd>nach Aufwand<small>im Angebot festgelegt</small></dd></div>
+      <div><dt>Workshops zur Bedarfsklärung<small>Bedarf, Vorstellung der Website, Funktionen</small></dt><dd>1 bis 3 Workshops<small>immer Teil des Projekts</small></dd></div>
+    </dl>
+    <h3 class="after-list">Was den Preis bestimmt</h3>
+    <ul class="points">
+      <li><h3>Größe des Unternehmens</h3><p>Ein Ein-Personen-Betrieb braucht meist weniger Seiten und Funktionen als ein Betrieb mit mehreren Standorten.</p></li>
+      <li><h3>Umfang und Funktionen</h3><p>Eine statische Seite mit Kontaktformular ist schlanker als eine Seite mit zusätzlichen Funktionen.</p></li>
+      <li><h3>Häufigkeit der Aktualisierungen</h3><p>Je öfter Inhalte angepasst werden sollen, desto mehr Pflegeaufwand fällt an.</p></li>
+    </ul>
+    <p class="more"><a class="btn btn-primary" href="/kontakt?thema=websites">Website anfragen <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
   </div>
 </section>
 
-<section class="section section-alt" aria-labelledby="faq-titel">
+<section class="section section-alt" id="ki-angebote">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>KI im Betrieb: Angebote.</h2>
+      <p class="lead">Klar umrissene Bausteine für Betriebe, die am Anfang stehen. Sie können einzeln gebucht werden und bauen aufeinander auf. <mark class="todo">[TODO] Vorschlag: bitte Angebote und Preise prüfen und anpassen</mark></p>
+    </div>
+    <ul class="offers">
+      <li class="offer"><div><h3>KI-Kennenlern-Workshop</h3><p>Halber Tag im Team: Was ist KI, was kann sie, was nicht? Erste Übungen mit echten Aufgaben aus Ihrem Betrieb.</p></div><div class="val">ab 290 €<small>einmalig, Vorschlag</small></div></li>
+      <li class="offer"><div><h3>Potenzial-Check</h3><p>Ein bis drei Workshops mit Ihrem Team und eine kurze schriftliche Empfehlung: Wo hilft KI bei Ihnen wirklich?</p></div><div class="val">ab 590 €<small>einmalig, Vorschlag</small></div></li>
+      <li class="offer"><div><h3>Chat-Agent aufbauen</h3><p>Einrichtung eines Chat-Agenten für Ihr Team, zum Beispiel für interne Fragen, Vorlagen und Zusammenfassungen, inklusive Spielregeln zum Datenschutz.</p></div><div class="val">nach Aufwand<small>Festpreis nach dem Potenzial-Check</small></div></li>
+      <li class="offer"><div><h3>Schulung und Begleitung</h3><p>Schulungen für Ihr Team und Unterstützung im Alltag, solange Sie sie brauchen.</p></div><div class="val">ab 490 € je Schulung<small>Begleitung nach Aufwand, Vorschlag</small></div></li>
+    </ul>
+    <p class="more"><a class="btn btn-primary" href="/kontakt?thema=ki">KI-Einstieg anfragen <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="faq-titel">
   <div class="wrap">
     <div class="section-head"><h2 id="faq-titel">Häufige Fragen.</h2></div>
     <div class="faq">
-      <details><summary>Was ist im Website-Abo enthalten?</summary><div class="answer"><p>Einrichtung, Hosting, laufende Pflege und Aktualisierungen. Der genaue Umfang steht vorab im Angebot. <mark class="todo">[TODO] Leistungsumfang je Paket festlegen</mark></p></div></details>
+      <details><summary>Was ist im Website-Abo enthalten?</summary><div class="answer"><p>Hosting, Pflege und laufende Aktualisierungen. Der genaue Umfang steht vorab im Angebot. <mark class="todo">[TODO] Leistungsumfang festlegen</mark></p></div></details>
+      <details><summary>Sind die Workshops kostenpflichtig?</summary><div class="answer"><p><mark class="todo">[TODO]</mark> Festlegen, ob das Erstgespräch und die Workshops im Aufbauaufwand enthalten oder getrennt berechnet werden.</p></div></details>
       <details><summary>Gibt es eine Mindestlaufzeit?</summary><div class="answer"><p><mark class="todo">[TODO]</mark> Laufzeit und Kündigungsfrist festlegen und hier erklären.</p></div></details>
       <details><summary>Gehört mir die Website, wenn ich kündige?</summary><div class="answer"><p><mark class="todo">[TODO]</mark> Regelung zu Inhalten, Domain und Übergabe festlegen.</p></div></details>
-      <details><summary>Was kostet KI-Beratung nach dem Einstieg?</summary><div class="answer"><p><mark class="todo">[TODO]</mark> Folgeangebote und Stundensatz festlegen. Im Erstgespräch besprechen wir, was bei Ihnen überhaupt sinnvoll ist.</p></div></details>
-      <details><summary>Wird Umsatzsteuer berechnet?</summary><div class="answer"><p>Nein. Ich wende die Kleinunternehmerregelung nach § 19 UStG an und weise daher keine Umsatzsteuer aus. <mark class="todo">[TODO] Formulierung prüfen lassen</mark></p></div></details>
+      <details><summary>Wird Umsatzsteuer berechnet?</summary><div class="answer"><p>Nein. Ich wende die Kleinunternehmerregelung nach § 19 UStG an und weise daher keine Umsatzsteuer aus. <mark class="todo">[TODO] Formulierung („netto“) rechtlich prüfen lassen</mark></p></div></details>
     </div>
   </div>
 </section>

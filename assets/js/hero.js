@@ -1,9 +1,9 @@
-/* Start-Hero: Lichtkegel folgt dem Mauszeiger über den Kacheln. Nur mit Maus und ohne reduzierte Bewegung. */
+/* Start-Hero: Lichtkegel folgt dem Mauszeiger über den beiden Hälften. Nur mit Maus und ohne reduzierte Bewegung. */
 (function () {
   'use strict';
-  var wrap = document.querySelector('.tiles');
+  var wrap = document.querySelector('.choice');
   if (!wrap || !matchMedia('(hover: hover) and (pointer: fine)').matches || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var tiles = Array.prototype.slice.call(wrap.querySelectorAll('.tile'));
+  var tiles = Array.prototype.slice.call(wrap.querySelectorAll('.panel'));
   var frame = 0, px = 0, py = 0;
   function paint() {
     frame = 0;

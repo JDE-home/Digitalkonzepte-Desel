@@ -1,4 +1,4 @@
-/* Kontaktformular: Vorauswahl aus dem Konfigurator, Prüfung im Browser, Versand an /api/contact. */
+/* Kontaktformular: Themen-Vorauswahl über den Link, Prüfung im Browser, Versand an /api/contact. */
 (function () {
   'use strict';
   var form = document.querySelector('[data-contact-form]');
@@ -6,19 +6,10 @@
   var loaded = Date.now();
   var status = form.querySelector('[data-status]');
   var button = form.querySelector('button[type="submit"]');
-  var PAKETE = { kompakt: 'Website-Abo Kompakt', standard: 'Website-Abo Standard', erweitert: 'Website-Abo Erweitert', 'ki-funktion': 'KI-Funktion für die Website', 'ki-beratung': 'KI-Einstiegsberatung' };
-
-  // Vorauswahl aus dem Konfigurator (?paket=standard,ki-beratung)
-  var keys = (new URLSearchParams(location.search).get('paket') || '').split(',').filter(function (k) { return PAKETE[k]; });
-  if (keys.length) {
-    var box = document.querySelector('[data-selection]');
-    box.hidden = false;
-    box.querySelector('[data-selection-list]').textContent = keys.map(function (k) { return PAKETE[k]; }).join(', ');
-    form.elements.pakete.value = keys.map(function (k) { return PAKETE[k]; }).join(', ');
-    var web = keys.some(function (k) { return ['kompakt', 'standard', 'erweitert'].indexOf(k) > -1; });
-    var ki = keys.some(function (k) { return k.indexOf('ki-') === 0; });
-    form.elements.topic.value = web && ki ? 'Website und KI' : web ? 'Website' : 'KI-Beratung';
-  }
+  // Vorauswahl über den Link (?thema=websites | ki | beides)
+  var THEMEN = { websites: 'Websites', ki: 'KI', beides: 'Websites und KI' };
+  var thema = THEMEN[new URLSearchParams(location.search).get('thema')];
+  if (thema) form.elements.topic.value = thema;
 
   function fieldError(name, msg) {
     var el = form.elements[name], err = document.getElementById(name + '-error');

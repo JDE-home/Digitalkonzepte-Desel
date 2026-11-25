@@ -38,7 +38,7 @@ const business = {
   url: url('/'),
   logo: url('/assets/img/logo.png'),
   image: url('/assets/img/og-image.png'),
-  description: 'Websites im Monatsabo und KI-Beratung für kleine Unternehmen, persönlich und pragmatisch.',
+  description: 'Websites im Monatsabo sowie Einstieg in KI für kleine Unternehmen: Beratung, Chat-Agents und Schulung, persönlich und pragmatisch.',
   areaServed: [
     { '@type': 'City', name: 'Oelde' },
     { '@type': 'AdministrativeArea', name: 'Kreis Warendorf' },
@@ -47,7 +47,7 @@ const business = {
   // Bewusst nur Ort und PLZ, keine Straße (Wohnadresse). Telefon und E-Mail ergänzen, sobald feststehend: [TODO]
   address: { '@type': 'PostalAddress', postalCode: '59302', addressLocality: 'Oelde', addressRegion: 'Nordrhein-Westfalen', addressCountry: 'DE' },
   founder: { '@type': 'Person', name: 'Jannik Desel' },
-  makesOffer: ['Website-Erstellung, Hosting und Pflege', 'KI-Beratung für kleine Unternehmen', 'KI-Funktionen für Websites'].map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n } })),
+  makesOffer: ['Website-Erstellung, Hosting und Pflege', 'KI-Beratung und Workshops für kleine Unternehmen', 'Chat-Agents aufbauen und Mitarbeitende schulen'].map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n } })),
 };
 function schemaFor(page) {
   const graph = [];
@@ -109,7 +109,7 @@ ${schemaFor(page)}`;
 }
 
 // ---------- Seiten ----------
-const layout = include(read('src/partials/layout.html'));
+const layouts = { default: include(read('src/partials/layout.html')), bare: include(read('src/partials/layout-bare.html')) };
 const lastmod = (file) => {
   try { return execSync(`git log -1 --format=%cs -- "src/${file}"`, { cwd: ROOT, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim() || null; } catch { return null; }
 };
@@ -118,11 +118,11 @@ const built = [];
 for (const page of pages) {
   const main = include(read(`src/${page.file}`));
   const scripts = ['site.js', ...(page.scripts || [])].map((f) => `<script src="/assets/js/${f}?v=${jsVer(f)}" defer></script>`).join('\n');
-  const html = layout
+  const html = layouts[page.layout || 'default']
     .replace('{{head}}', () => headFor(page))
-    .replace('{{header}}', () => include(read('src/partials/header.html')).replace('{{nav}}', navHtml(page.slug)))
+    .replace('{{header}}', () => (page.layout === 'bare' ? '' : include(read('src/partials/header.html')).replace('{{nav}}', navHtml(page.slug))))
     .replace('{{main}}', () => main)
-    .replace('{{footer}}', () => include(read('src/partials/footer.html')).replace('{{year}}', new Date().getFullYear()).replace('{{nav}}', navHtml(page.slug)))
+    .replace('{{footer}}', () => (page.layout === 'bare' ? '' : include(read('src/partials/footer.html')).replace('{{year}}', new Date().getFullYear()).replace('{{nav}}', navHtml(page.slug))))
     .replace('{{scripts}}', () => scripts)
     .replace('{{bodyclass}}', page.bodyClass || '');
   const out = page.slug === 'index' ? 'index.html' : page.slug === '404' ? '404.html' : `${page.slug}.html`;

@@ -8,7 +8,7 @@
 //                    Die Domain muss in Resend verifiziert sein.
 //   CONTACT_CONFIRM  "1" schickt dem Absender zusätzlich eine kurze Eingangsbestätigung (optional, Standard: aus).
 //
-// Erwartete Felder: name, mail, tel, firma, topic, pakete, msg, consent.
+// Erwartete Felder: name, mail, tel, firma, topic, msg, consent.
 // Zusätzlich: elapsed (ms seit Laden der Seite), website (Honeypot, muss leer sein).
 
 import { Resend } from 'resend';
@@ -56,7 +56,7 @@ const required = (max, message) => oneLine(max).pipe(z.string().min(1, message))
 const email = (message) => oneLine(200).pipe(z.string().regex(/^[^\s@<>"',;]+@[^\s@<>"',;]+\.[^\s@<>"',;]{2,}$/, message));
 const tick = (message) => z.preprocess((v) => v === true || v === 'on' || v === 'true' || v === '1', z.literal(true, { error: message }));
 
-export const TOPICS = ['Website', 'KI-Beratung', 'Website und KI', 'Noch unsicher'];
+export const TOPICS = ['Websites', 'KI', 'Websites und KI', 'Noch unsicher'];
 
 const SCHEMA = z.object({
   name: required(120, 'Bitte geben Sie Ihren Namen an.'),
@@ -64,7 +64,6 @@ const SCHEMA = z.object({
   tel: oneLine(60),
   firma: oneLine(120),
   topic: oneLine(80),
-  pakete: oneLine(300),
   msg: multiLine(5000),
   consent: tick('Bitte stimmen Sie der Datenschutzerklärung zu.'),
 });
@@ -89,7 +88,6 @@ function build(input) {
       ['Unternehmen', d.firma || '–'],
       ['Telefon', d.tel || '–'],
       ['Thema', topic],
-      ['Paketauswahl', d.pakete || '–'],
       ['Nachricht', d.msg || '–'],
     ],
   };
