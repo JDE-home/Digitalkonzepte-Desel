@@ -2,20 +2,24 @@
   {
     "slug": "index", "file": "index.html", "path": "/",
     "title": "Digitalkonzepte Desel – Websites und KI für kleine Betriebe",
-    "description": "Websites im Monatsabo und KI-Beratung aus einer Hand: persönlich, pragmatisch und transparent. Digitalkonzepte Desel aus Oelde für kleine Unternehmen.",
+    "description": "Websites im Monatsabo und der Einstieg in KI für kleine Unternehmen: persönlich, pragmatisch und transparent. Digitalkonzepte Desel aus Oelde.",
     "scripts": ["hero.js"]
   },
   {
-    "slug": "leistungen", "file": "leistungen.html", "path": "/leistungen", "nav": "Leistungen",
-    "title": "Leistungen: Websites und KI-Beratung",
-    "description": "Website-Erstellung mit Hosting und Pflege, KI-Beratung mit Schulung und KI-Funktionen für Ihre Website wie Chat-Assistent und automatisierte Anfragen.",
+    "slug": "websites", "file": "websites.html", "path": "/websites", "nav": "Websites",
+    "title": "Websites: Erstellung, Hosting und Pflege",
+    "description": "Websites für kleine Unternehmen: Workshops zur Bedarfsklärung, Aufbau, Hosting und Pflege im Monatsabo. Monatliche Gebühr ab etwa 75 bis 100 Euro."
+  },
+  {
+    "slug": "ki", "file": "ki.html", "path": "/ki", "nav": "KI", "crumb": "KI im Betrieb",
+    "title": "KI im Betrieb: Beratung, Chat-Agents, Schulung",
+    "description": "KI für kleine Unternehmen, die noch am Anfang stehen: Potenziale erkennen, Chat-Agents aufbauen, Mitarbeitende einbinden und schulen. Praxisnah und verständlich.",
     "scripts": ["chat-demo.js"]
   },
   {
-    "slug": "pakete-preise", "file": "pakete-preise.html", "path": "/pakete-preise", "nav": "Pakete & Preise", "crumb": "Pakete und Preise",
-    "title": "Pakete und Preise: Website-Abo und KI-Beratung",
-    "description": "Website im Monatsabo mit Einrichtung, Hosting und Pflege plus Einstiegsangebot für die KI-Beratung. Stellen Sie Ihr Paket zusammen und sehen Sie die Monatssumme.",
-    "scripts": ["configurator.js"]
+    "slug": "pakete-preise", "file": "pakete-preise.html", "path": "/pakete-preise", "nav": "Preise", "crumb": "Preise",
+    "title": "Preise: So setzen sich Website und KI zusammen",
+    "description": "Website im Monatsabo ab etwa 75 bis 100 Euro plus Aufwand fürs Aufsetzen, KI als Workshops und Begleitung. Ablauf, Richtwerte und was den Preis bestimmt."
   },
   {
     "slug": "ueber-mich", "file": "ueber-mich.html", "path": "/ueber-mich", "nav": "Über mich", "crumb": "Über mich",
@@ -30,13 +34,13 @@
   {
     "slug": "kontakt", "file": "kontakt.html", "path": "/kontakt", "nav": "Kontakt",
     "title": "Kontakt und Erstgespräch",
-    "description": "Vereinbaren Sie ein kostenloses Erstgespräch zu Website und KI für Ihr Unternehmen: per Kontaktformular oder direkter Terminbuchung.",
+    "description": "Vereinbaren Sie ein Erstgespräch zu Website oder KI für Ihr Unternehmen: per Kontaktformular oder direkter Terminbuchung.",
     "scripts": ["contact.js"]
   },
   {
     "slug": "webdesign-ki-beratung-oelde", "file": "webdesign-ki-beratung-oelde.html", "path": "/webdesign-ki-beratung-oelde", "crumb": "Webdesign und KI-Beratung in Oelde",
     "title": "Webdesign und KI-Beratung in Oelde",
-    "description": "Webdesign, Hosting und KI-Beratung in Oelde und im Kreis Warendorf: ein persönlicher Ansprechpartner für Ihre Website und den Einsatz von KI im Betrieb.",
+    "description": "Webdesign, Hosting und KI-Beratung in Oelde und im Kreis Warendorf: ein persönlicher Ansprechpartner für Ihre Website und den Einstieg in KI im Betrieb.",
     "og": "og-oelde.png"
   },
   {
@@ -47,7 +51,12 @@
   {
     "slug": "datenschutz", "file": "datenschutz.html", "path": "/datenschutz", "crumb": "Datenschutzerklärung",
     "title": "Datenschutzerklärung",
-    "description": "Datenschutzerklärung von Digitalkonzepte Desel: Hosting bei Vercel, Kontaktformular über Resend, keine Cookies und kein Tracking (Entwurf)."
+    "description": "Datenschutzerklärung von Digitalkonzepte Desel: Hosting bei Vercel, Kontaktformular über Resend, geschützter Bereich und keine Werbe-Cookies (Entwurf)."
+  },
+  {
+    "slug": "login", "file": "login.html", "path": "/login", "noindex": true, "layout": "bare", "bodyClass": "login", "scripts": ["login.js"],
+    "title": "Geschützter Bereich",
+    "description": "Geschützter Bereich von Digitalkonzepte Desel. Bitte geben Sie das Passwort ein, um die Seite zu öffnen."
   },
   {
     "slug": "404", "file": "404.html", "path": "/404", "noindex": true,

@@ -7,7 +7,7 @@ let ipCounter = 0;
 const post = (body, ip = `203.0.113.${(ipCounter = (ipCounter % 250) + 1)}`) =>
   POST(new Request('https://example.test/api/contact', { method: 'POST', headers: { 'x-forwarded-for': ip }, body: typeof body === 'string' ? body : JSON.stringify(body) }));
 
-const valid = { name: 'Erika Muster', mail: 'erika@example.com', tel: '', firma: 'Muster GmbH', topic: 'Website und KI', pakete: 'Website-Abo Standard', msg: 'Hallo\nZeile 2', consent: true, website: '', elapsed: 6500 };
+const valid = { name: 'Erika Muster', mail: 'erika@example.com', tel: '', firma: 'Muster GmbH', topic: 'Websites und KI', msg: 'Hallo\nZeile 2', consent: true, website: '', elapsed: 6500 };
 
 function setup({ status = 200 } = {}) {
   _resetRateLimit();
@@ -32,9 +32,9 @@ test('Anfrage wird an CONTACT_TO versendet, Antworten gehen an den Absender', as
   assert.deepEqual(c.body.to, ['empfang@example.org']);
   assert.equal(c.body.reply_to, 'erika@example.com');
   assert.equal(c.body.from, 'Digitalkonzepte Desel <kontakt@digitalkonzepte-desel.de>');
-  assert.equal(c.body.subject, 'Neue Anfrage über die Website: Website und KI – Erika Muster');
+  assert.equal(c.body.subject, 'Neue Anfrage über die Website: Websites und KI – Erika Muster');
   assert.match(c.body.text, /Unternehmen: Muster GmbH/);
-  assert.match(c.body.text, /Paketauswahl: Website-Abo Standard/);
+  assert.match(c.body.text, /Thema: Websites und KI/);
   assert.match(c.body.text, /Hallo\nZeile 2/);
   assert.match(c.body.html, /<table/);
 });

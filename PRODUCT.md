@@ -16,17 +16,16 @@ Inhaberinnen und Inhaber kleiner Unternehmen (Handwerk, Dienstleistung, lokaler 
 
 ## Product Purpose
 
-Digitalkonzepte Desel ist ein Nebengewerbe von Jannik Desel (Einzelunternehmer, Oelde). Zwei Leistungen aus einer Hand, verstanden als ein gemeinsames Konzept („Digitalisierung für kleine Unternehmen: persönlich, pragmatisch, mit KI“):
+Digitalkonzepte Desel ist ein Nebengewerbe von Jannik Desel (Einzelunternehmer, Oelde). Zwei getrennte Leistungen, die auf der Startseite als gleichwertige Wege angeboten werden. Besucher wählen, wohin sie möchten:
 
-1. Websites: Erstellung, Hosting und laufende Pflege im Monatsabo.
-2. KI-Beratung: Potenziale erkennen, Werkzeuge einführen (zunächst bewährte, etablierte Plattformen, z. B. Langdock), Mitarbeitende schulen.
-3. Brücke: KI-Funktionen für die Website (z. B. Chat-Assistent, automatisierte Anfragen).
+1. **Websites:** Workshops (immer 1 bis 3) zur Bedarfsklärung, Aufbau, Hosting und laufende Pflege im Monatsabo. Monatliche Gebühr ab etwa 75 bis 100 Euro, eine einfache statische Website mit Kontaktformular eher bei etwa 150 Euro, dazu einmaliger Aufwand fürs Aufsetzen. Der Preis hängt von Unternehmensgröße, Funktionen und Häufigkeit der Aktualisierungen ab, deshalb gibt es bewusst keine festen Preise.
+2. **KI im Betrieb:** nicht an die Website gekoppelt. Für kleine Unternehmen, die KI bisher kaum nutzen: Potenziale erkennen, Chat-Agents für das Team aufbauen (Einführung bewährter Plattformen, zum Beispiel Langdock), Mitarbeitende einbinden und schulen, Mehrwert schaffen. Low-Level-Einstieg. KI-Funktionen für die eigene Website sind nur eine Option am Rande.
 
-Die Website soll Vertrauen aufbauen und zum kostenlosen Erstgespräch führen. Erfolg: Anfragen über Formular oder Terminlink.
+Die Website soll Vertrauen aufbauen und zum Erstgespräch führen. Erfolg: Anfragen über Formular oder Terminlink. Bis zum Livegang liegt die Website hinter einem Passwort.
 
 ## Positioning
 
-Ein persönlicher Ansprechpartner für alles Digitale statt Agentur-Hotline: Website und KI-Einführung aus einer Hand, zu transparenten Monatspreisen, ohne Fachchinesisch. Die Seite selbst ist der Beweis für die Qualität der Arbeit.
+Ein persönlicher Ansprechpartner für alles Digitale statt Agentur-Hotline: Website und KI-Einstieg bei derselben Person, mit Workshops, die den Bedarf klären, und transparenten Preisen, ohne Fachchinesisch. Die Seite selbst ist der Beweis für die Qualität der Arbeit.
 
 ## Operating Context
 
@@ -38,8 +37,8 @@ Ein persönlicher Ansprechpartner für alles Digitale statt Agentur-Hotline: Web
 ## Capabilities and Constraints
 
 - Ansprache der Besuchenden mit **Sie**, Ich-Form (ein Ansprechpartner, kein Team).
-- Preise: Platzhalter. Hinweis „keine Umsatzsteuer gemäß § 19 UStG (Kleinunternehmerregelung)“. Wortlaut rechtlich prüfen lassen.
-- Keine Cookies und kein Tracking mit Einwilligungspflicht, Schriften lokal, keine Fremdinhalte. Terminbuchung nur als Link.
+- Preise: Richtwerte, keine festen Preise (Websites) und Vorschläge (KI-Angebote, vom Betreiber zu prüfen). Hinweis „keine Umsatzsteuer gemäß § 19 UStG (Kleinunternehmerregelung)“. Wortlaut rechtlich prüfen lassen.
+- Kein Tracking, keine einwilligungspflichtigen Cookies (nur das technisch notwendige Login-Cookie), Schriften lokal, keine Fremdinhalte. Passwortschutz über `SITE_PASSWORD`. Terminbuchung nur als Link.
 - Impressum und Datenschutzerklärung nur als Entwurf, rechtliche Prüfung steht aus.
 - Texte sind erster Entwurf, offene Stellen stehen als `[TODO]` im Text.
 - Offen: echte Preise, Foto und Werdegang, Referenzen, Terminbuchungstool, E-Mail-Adresse und Telefon, Postfach der neuen Domain, ob der Betreiber Partner von Langdock ist.
@@ -53,7 +52,7 @@ Ein persönlicher Ansprechpartner für alles Digitale statt Agentur-Hotline: Web
 
 ## Evidence on Hand
 
-Keine Kundenstimmen, keine Referenzprojekte, kein Foto, keine echten Preise. Nichts davon erfinden. Referenzen und Foto bleiben markierte Platzhalter. Die Chat-Demo auf der Seite ist eine **statische Beispiel-Unterhaltung** und wird als „Demo“ gekennzeichnet.
+Keine Kundenstimmen, keine Referenzprojekte, kein Foto, keine echten Preise. Nichts davon erfinden. Referenzen und Foto bleiben markierte Platzhalter. Die Chat-Demo auf der KI-Seite ist eine **statische Beispiel-Unterhaltung** (interner Betriebs-Assistent) und wird als „Demo“ gekennzeichnet.
 
 ## Product Principles
 

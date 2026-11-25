@@ -31,26 +31,35 @@ for (const p of pages) {
   });
 }
 
-test('Konfigurator rechnet und gibt die Auswahl an die Kontaktseite weiter', async () => {
-  const { ctx, page } = await open('/pakete-preise');
-  const monat = page.locator('[data-sum-monat]');
-  assert.match(await monat.textContent(), /79/);
-  await page.locator('#b-funktion').check();
-  await page.locator('#b-beratung').check();
-  await page.waitForTimeout(250);
-  assert.match(await monat.textContent(), /118/);
-  assert.match(await page.locator('[data-sum-einmal]').textContent(), /290/);
-  await page.locator('#w-erweitert').check();
-  await page.waitForTimeout(250);
-  assert.match(await monat.textContent(), /168/);
-  // Tastatur: Radiogruppe per Pfeiltaste
-  await page.locator('#w-ohne').focus(); await page.keyboard.press('Space'); await page.waitForTimeout(250);
-  assert.match(await monat.textContent(), /39/);
-  await page.locator('[data-config-cta]').click();
-  await page.waitForURL(/\/kontakt\?paket=/);
-  assert.ok(await page.locator('[data-selection]').isVisible());
-  assert.equal(await page.locator('#topic').inputValue(), 'KI-Beratung');
-  assert.match(await page.locator('[data-selection-list]').textContent(), /KI-Einstiegsberatung/);
+test('Startseite: Auswahl führt zu Websites und zu KI, per Tastatur erreichbar', async () => {
+  const { ctx, page } = await open('/');
+  const web = page.locator('.panel.p-web h2 a'), ki = page.locator('.panel.p-ki h2 a');
+  assert.equal(await web.getAttribute('href'), '/websites');
+  assert.equal(await ki.getAttribute('href'), '/ki');
+  // Der ganze Bereich ist klickbar (Link überdeckt die Fläche)
+  const box = await page.locator('.panel.p-ki').boundingBox();
+  await page.mouse.click(box.x + box.width * 0.4, box.y + box.height * 0.5);
+  await page.waitForURL('**/ki');
+  await page.goBack({ waitUntil: 'networkidle' });
+  await page.keyboard.press('Tab'); // Skip-Link
+  for (let i = 0; i < 12; i++) { await page.keyboard.press('Tab'); if (await page.evaluate(() => document.activeElement?.closest('.p-web'))) break; }
+  assert.ok(await page.evaluate(() => !!document.activeElement.closest('.p-web')), 'Fokus erreicht die Website-Hälfte');
+  await page.keyboard.press('Enter');
+  await page.waitForURL('**/websites');
+  await ctx.close();
+});
+
+test('Handy: Auswahl steht untereinander, nichts läuft über', async () => {
+  const { ctx, page } = await open('/', { viewport: { width: 390, height: 844 } });
+  const a = await page.locator('.panel.p-web').boundingBox(), b = await page.locator('.panel.p-ki').boundingBox();
+  assert.ok(b.y >= a.y + a.height - 1, 'untereinander');
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), 'kein horizontales Scrollen');
+  await ctx.close();
+});
+
+test('Kontaktformular: Themen-Vorauswahl über den Link', async () => {
+  const { ctx, page } = await open('/kontakt?thema=ki');
+  assert.equal(await page.locator('#topic').inputValue(), 'KI');
   await ctx.close();
 });
 
@@ -68,11 +77,11 @@ test('Mobiles Menü: öffnen, per Escape schließen, Fokus zurück', async () =>
   const { ctx, page } = await open('/', { viewport: { width: 390, height: 844 } });
   const burger = page.locator('[data-menu-toggle]');
   assert.equal(await burger.getAttribute('aria-expanded'), 'false');
-  assert.ok(!(await page.locator('[data-nav] a', { hasText: 'Leistungen' }).isVisible()));
+  assert.ok(!(await page.locator('[data-nav] a', { hasText: 'Websites' }).isVisible()));
   await burger.click();
   assert.equal(await burger.getAttribute('aria-expanded'), 'true');
   await page.waitForTimeout(300);
-  assert.ok(await page.locator('[data-nav] a', { hasText: 'Leistungen' }).isVisible());
+  assert.ok(await page.locator('[data-nav] a', { hasText: 'Websites' }).isVisible());
   await page.keyboard.press('Escape');
   assert.equal(await burger.getAttribute('aria-expanded'), 'false');
   assert.equal(await page.evaluate(() => document.activeElement?.hasAttribute('data-menu-toggle')), true);
@@ -80,7 +89,7 @@ test('Mobiles Menü: öffnen, per Escape schließen, Fokus zurück', async () =>
 });
 
 test('Chat-Demo spielt ab und kann wiederholt werden; bei reduzierter Bewegung sofort sichtbar', async () => {
-  const { ctx, page } = await open('/leistungen');
+  const { ctx, page } = await open('/ki');
   await page.locator('[data-chat-demo]').scrollIntoViewIfNeeded();
   await page.waitForTimeout(6500);
   assert.equal(await page.locator('.chat-log [data-step]:not([hidden])').count(), 5);
@@ -88,7 +97,7 @@ test('Chat-Demo spielt ab und kann wiederholt werden; bei reduzierter Bewegung s
   await page.waitForTimeout(200);
   assert.ok((await page.locator('.chat-log [data-step]:not([hidden])').count()) < 5);
   await ctx.close();
-  const r = await open('/leistungen', { reducedMotion: 'reduce' });
+  const r = await open('/ki', { reducedMotion: 'reduce' });
   assert.equal(await r.page.locator('.chat-log [data-step]:not([hidden])').count(), 5);
   await r.ctx.close();
 });

@@ -3,6 +3,8 @@
 Stand: **freigegeben** (alle acht Empfehlungen aus Abschnitt 10 angenommen). Farbwelt: **Finanzkonzepte** (nicht die Logo-Farben).
 Umgesetzt: Phase 0 bis 4 (Skills, Fundament, alle Seiten, Formular, Rechtsentwürfe, SEO, Tests). Gewählt: Hero A (Raster), Chat-Demo als Abschnitt auf „Leistungen“, Richtung „präzise-technisch“, Paket-Konfigurator. Offen: Phase 5 (Vercel, Domain, Resend) und die `[TODO]`-Inhalte.
 
+**Änderung nach Rückmeldung:** Startseite als Auswahl Websites (links) / KI (rechts) mit eigenen Unterseiten `/websites` und `/ki`. Der Konfigurator entfällt, Preise nur als Richtwerte und Vorschläge. KI-Angebote sind unabhängig von der Website (Workshops, Chat-Agents, Schulung). Dazu ein Passwortschutz über der gesamten Seite (`SITE_PASSWORD`).
+
 ---
 
 ## 1. Befund: Was „desel-finanzkonzepte“ technisch ist
