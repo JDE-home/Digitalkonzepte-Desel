@@ -211,14 +211,7 @@ mark.todo { background: var(--copper-soft); color: var(--ink); padding: .05em .4
 .faq details[open] summary::after { transform: rotate(225deg) translate(-2px, -2px); }
 .faq .answer { padding: 0 0 1.3rem; color: var(--muted); max-width: 62ch; }
 
-/* ---------- Referenzen ---------- */
-.ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: var(--s-5); }
-.ref { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-.ref-img { aspect-ratio: 4 / 3; display: grid; place-items: center; text-align: center; padding: var(--s-4); background: repeating-linear-gradient(135deg, var(--bg) 0 14px, transparent 14px 28px), var(--surface); color: var(--muted); font-size: .9rem; border-bottom: 1px solid var(--line); }
-.ref-body { padding: var(--s-5); }
-.ref-body h3, .ref-body .h3-like { font-family: var(--font-display); font-weight: 600; line-height: 1.25; font-size: 1.2rem; margin-bottom: var(--s-2); }
 .more { margin-top: var(--s-6); }
-.ref-body p { color: var(--muted); font-size: .95rem; }
 
 /* ---------- Über mich ---------- */
 .about { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
@@ -316,7 +309,6 @@ mark.todo { background: var(--copper-soft); color: var(--ink); padding: .05em .4
 .page-hero .stack { margin-top: var(--s-4); }
 .consent label { font-weight: 400; }
 @media (max-width: 520px) {
-  .ref-img { aspect-ratio: 16 / 7; }
 }
 
 /* ---------- Login ---------- */

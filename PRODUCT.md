@@ -41,7 +41,7 @@ Ein persönlicher Ansprechpartner für alles Digitale statt Agentur-Hotline: Web
 - Kein Tracking, keine einwilligungspflichtigen Cookies (nur das technisch notwendige Login-Cookie), Schriften lokal, keine Fremdinhalte. Passwortschutz über `SITE_PASSWORD`. Terminbuchung nur als Link.
 - Impressum und Datenschutzerklärung nur als Entwurf, rechtliche Prüfung steht aus.
 - Texte sind erster Entwurf, offene Stellen stehen als `[TODO]` im Text.
-- Offen: echte Preise, Foto und Werdegang, Referenzen, Terminbuchungstool, E-Mail-Adresse und Telefon, Postfach der neuen Domain, ob der Betreiber Partner von Langdock ist.
+- Offen: echte Preise, Foto und Werdegang, Terminbuchungstool, E-Mail-Adresse und Telefon, Postfach der neuen Domain, ob der Betreiber Partner von Langdock ist.
 
 ## Brand Commitments
 
@@ -52,7 +52,7 @@ Ein persönlicher Ansprechpartner für alles Digitale statt Agentur-Hotline: Web
 
 ## Evidence on Hand
 
-Keine Kundenstimmen, keine Referenzprojekte, kein Foto, keine echten Preise. Nichts davon erfinden. Referenzen und Foto bleiben markierte Platzhalter. Die Chat-Demo auf der KI-Seite ist eine **statische Beispiel-Unterhaltung** (interner Betriebs-Assistent) und wird als „Demo“ gekennzeichnet.
+Keine Kundenstimmen, keine Referenzprojekte, kein Foto, keine echten Preise. Nichts davon erfinden. Eine Referenzseite gibt es bewusst nicht (entfernt). Das Foto bleibt markierte Platzhalter. Die Chat-Demo auf der KI-Seite ist eine **statische Beispiel-Unterhaltung** (interner Betriebs-Assistent) und wird als „Demo“ gekennzeichnet.
 
 ## Product Principles
 

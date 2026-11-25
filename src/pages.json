@@ -1,65 +1,106 @@
 [
   {
-    "slug": "index", "file": "index.html", "path": "/",
+    "slug": "index",
+    "file": "index.html",
+    "path": "/",
     "title": "Digitalkonzepte Desel – Websites und KI für kleine Betriebe",
     "description": "Websites im Monatsabo und der Einstieg in KI für kleine Unternehmen: persönlich, pragmatisch und transparent. Digitalkonzepte Desel aus Oelde.",
-    "scripts": ["hero.js"]
+    "scripts": [
+      "hero.js"
+    ]
   },
   {
-    "slug": "websites", "file": "websites.html", "path": "/websites", "nav": "Websites",
+    "slug": "websites",
+    "file": "websites.html",
+    "path": "/websites",
+    "nav": "Websites",
     "title": "Websites: Erstellung, Hosting und Pflege",
     "description": "Websites für kleine Unternehmen: Workshops zur Bedarfsklärung, Aufbau, Hosting und Pflege im Monatsabo. Monatliche Gebühr ab etwa 75 bis 100 Euro."
   },
   {
-    "slug": "ki", "file": "ki.html", "path": "/ki", "nav": "KI", "crumb": "KI im Betrieb",
+    "slug": "ki",
+    "file": "ki.html",
+    "path": "/ki",
+    "nav": "KI",
+    "crumb": "KI im Betrieb",
     "title": "KI im Betrieb: Beratung, Chat-Agents, Schulung",
     "description": "KI für kleine Unternehmen, die noch am Anfang stehen: Potenziale erkennen, Chat-Agents aufbauen, Mitarbeitende einbinden und schulen. Praxisnah und verständlich.",
-    "scripts": ["chat-demo.js"]
+    "scripts": [
+      "chat-demo.js"
+    ]
   },
   {
-    "slug": "pakete-preise", "file": "pakete-preise.html", "path": "/pakete-preise", "nav": "Preise", "crumb": "Preise",
+    "slug": "pakete-preise",
+    "file": "pakete-preise.html",
+    "path": "/pakete-preise",
+    "nav": "Preise",
+    "crumb": "Preise",
     "title": "Preise: So setzen sich Website und KI zusammen",
     "description": "Website im Monatsabo ab etwa 75 bis 100 Euro plus Aufwand fürs Aufsetzen, KI als Workshops und Begleitung. Ablauf, Richtwerte und was den Preis bestimmt."
   },
   {
-    "slug": "ueber-mich", "file": "ueber-mich.html", "path": "/ueber-mich", "nav": "Über mich", "crumb": "Über mich",
+    "slug": "ueber-mich",
+    "file": "ueber-mich.html",
+    "path": "/ueber-mich",
+    "nav": "Über mich",
+    "crumb": "Über mich",
     "title": "Über mich: Jannik Desel aus Oelde",
     "description": "Jannik Desel aus Oelde: ein persönlicher Ansprechpartner für Website und KI in kleinen Unternehmen. Erfahren Sie, wie ich arbeite und was mir wichtig ist."
   },
   {
-    "slug": "referenzen", "file": "referenzen.html", "path": "/referenzen", "nav": "Referenzen",
-    "title": "Referenzen und Projekte",
-    "description": "Ausgewählte Projekte von Digitalkonzepte Desel: Websites und KI-Lösungen für kleine Unternehmen. Hier entsteht die Referenzübersicht."
-  },
-  {
-    "slug": "kontakt", "file": "kontakt.html", "path": "/kontakt", "nav": "Kontakt",
+    "slug": "kontakt",
+    "file": "kontakt.html",
+    "path": "/kontakt",
+    "nav": "Kontakt",
     "title": "Kontakt und Erstgespräch",
     "description": "Vereinbaren Sie ein Erstgespräch zu Website oder KI für Ihr Unternehmen: per Kontaktformular oder direkter Terminbuchung.",
-    "scripts": ["contact.js"]
+    "scripts": [
+      "contact.js"
+    ]
   },
   {
-    "slug": "webdesign-ki-beratung-oelde", "file": "webdesign-ki-beratung-oelde.html", "path": "/webdesign-ki-beratung-oelde", "crumb": "Webdesign und KI-Beratung in Oelde",
+    "slug": "webdesign-ki-beratung-oelde",
+    "file": "webdesign-ki-beratung-oelde.html",
+    "path": "/webdesign-ki-beratung-oelde",
+    "crumb": "Webdesign und KI-Beratung in Oelde",
     "title": "Webdesign und KI-Beratung in Oelde",
     "description": "Webdesign, Hosting und KI-Beratung in Oelde und im Kreis Warendorf: ein persönlicher Ansprechpartner für Ihre Website und den Einstieg in KI im Betrieb.",
     "og": "og-oelde.png"
   },
   {
-    "slug": "impressum", "file": "impressum.html", "path": "/impressum", "crumb": "Impressum",
+    "slug": "impressum",
+    "file": "impressum.html",
+    "path": "/impressum",
+    "crumb": "Impressum",
     "title": "Impressum",
     "description": "Impressum von Digitalkonzepte Desel, Jannik Desel, Oelde. Angaben gemäß § 5 Digitale-Dienste-Gesetz (Entwurf)."
   },
   {
-    "slug": "datenschutz", "file": "datenschutz.html", "path": "/datenschutz", "crumb": "Datenschutzerklärung",
+    "slug": "datenschutz",
+    "file": "datenschutz.html",
+    "path": "/datenschutz",
+    "crumb": "Datenschutzerklärung",
     "title": "Datenschutzerklärung",
     "description": "Datenschutzerklärung von Digitalkonzepte Desel: Hosting bei Vercel, Kontaktformular über Resend, geschützter Bereich und keine Werbe-Cookies (Entwurf)."
   },
   {
-    "slug": "login", "file": "login.html", "path": "/login", "noindex": true, "layout": "bare", "bodyClass": "login", "scripts": ["login.js"],
+    "slug": "login",
+    "file": "login.html",
+    "path": "/login",
+    "noindex": true,
+    "layout": "bare",
+    "bodyClass": "login",
+    "scripts": [
+      "login.js"
+    ],
     "title": "Geschützter Bereich",
     "description": "Geschützter Bereich von Digitalkonzepte Desel. Bitte geben Sie das Passwort ein, um die Seite zu öffnen."
   },
   {
-    "slug": "404", "file": "404.html", "path": "/404", "noindex": true,
+    "slug": "404",
+    "file": "404.html",
+    "path": "/404",
+    "noindex": true,
     "title": "Seite nicht gefunden",
     "description": "Diese Seite gibt es nicht. Zurück zur Startseite von Digitalkonzepte Desel."
   }

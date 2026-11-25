@@ -27,7 +27,7 @@ PRODUCT.md      Produktbeschreibung für die Design-Skills
 
 ```
 npm install
-npm test                 # baut und führt 99 Tests aus
+npm test                 # baut und führt alle Tests aus
 npx vercel dev           # lokal mit Formular-Funktion (braucht .env.local)
 node tools/og-image.mjs  # Vorschaubilder (assets/img/og-*.png) neu erzeugen
 ```
@@ -38,7 +38,7 @@ node tools/og-image.mjs  # Vorschaubilder (assets/img/og-*.png) neu erzeugen
 - **Preise:** Richtwerte und Vorschläge, bewusst ohne feste Preise. Websites: Richtwerte in `src/pakete-preise.html` (Abschnitt „Websites im Monatsabo“) und als Satz in `src/websites.html`. KI: die vier Angebote samt Preisvorschlägen in `src/pakete-preise.html` (Abschnitt „KI im Betrieb: Angebote“), als Vorschlag markiert.
 - **Seiten und Menü:** `src/pages.json` (Menüpunkte = Einträge mit `nav`).
 - **Titel und Beschreibungen:** `src/pages.json`. Neue Seite: Datei in `src/` anlegen und in `pages.json` eintragen.
-- **Foto, Referenzen:** Platzhalter in `src/ueber-mich.html` und `src/referenzen.html`.
+- **Foto:** Platzhalter in `src/ueber-mich.html`. Eine Referenzseite gibt es derzeit nicht (bewusst entfernt, bei Bedarf wieder anlegen und in `src/pages.json` eintragen).
 - **Startseite:** Auswahl Websites/KI in `src/index.html` (zwei Flächen, die zusammen das „D“ des Logos bilden). Beide Flächen sind komplett klickbar und per Tastatur erreichbar.
 - **Terminbuchung:** Link in `src/kontakt.html` (Abschnitt „Termin direkt buchen“) eintragen. Nur verlinken, nicht einbetten (sonst Fremdverbindung ohne Einwilligung).
 
