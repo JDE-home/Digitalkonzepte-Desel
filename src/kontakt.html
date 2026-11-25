@@ -1,0 +1,79 @@
+<section class="page-hero gridbg">
+  <div class="wrap">
+    <h1>Kontakt und <em>Erstgespräch.</em></h1>
+    <p class="lead">Schreiben Sie mir kurz, worum es geht, oder buchen Sie direkt einen Termin. Ich melde mich in der Regel innerhalb eines Werktags. <mark class="todo">[TODO] Antwortzeit bestätigen</mark></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <form class="form" data-contact-form novalidate aria-label="Kontaktformular">
+      <div class="selection" data-selection hidden>
+        <strong>Ihre Auswahl aus dem Konfigurator:</strong> <span data-selection-list></span>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required aria-invalid="false">
+          <p class="error" id="name-error"></p>
+        </div>
+        <div class="field">
+          <label for="mail">E-Mail</label>
+          <input id="mail" name="mail" type="email" autocomplete="email" required aria-invalid="false">
+          <p class="error" id="mail-error"></p>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field">
+          <label for="firma">Unternehmen <span class="opt-note">(optional)</span></label>
+          <input id="firma" name="firma" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="tel">Telefon <span class="opt-note">(optional)</span></label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel">
+        </div>
+      </div>
+      <div class="field">
+        <label for="topic">Worum geht es?</label>
+        <select id="topic" name="topic">
+          <option value="Noch unsicher">Ich bin noch unsicher</option>
+          <option value="Website">Website</option>
+          <option value="KI-Beratung">KI-Beratung</option>
+          <option value="Website und KI">Website und KI</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="msg">Ihre Nachricht <span class="opt-note">(optional)</span></label>
+        <textarea id="msg" name="msg" rows="5"></textarea>
+      </div>
+      <input type="hidden" name="pakete" value="">
+      <div class="hp" aria-hidden="true"><label>Bitte leer lassen <input name="website" type="text" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field">
+        <div class="consent">
+          <input id="consent" name="consent" type="checkbox" aria-invalid="false" aria-describedby="consent-error">
+          <label for="consent">Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden.</label>
+        </div>
+        <p class="error" id="consent-error"></p>
+      </div>
+      <div class="form-status" role="status" aria-live="polite" data-status></div>
+      <div><button class="btn btn-primary" type="submit">Nachricht senden</button></div>
+      <noscript><p>Für das Formular wird JavaScript benötigt. Schreiben Sie mir alternativ direkt: <mark class="todo">[TODO] E-Mail-Adresse</mark></p></noscript>
+    </form>
+
+    <div>
+      <div class="side-card" id="termin">
+        <h2>Termin direkt buchen</h2>
+        <p>Wählen Sie einen freien Termin für das kostenlose Erstgespräch. Die Buchung öffnet sich bei einem externen Anbieter.</p>
+        <p class="cta-row"><a class="btn btn-primary" href="#termin"><mark class="todo">[TODO] Link zur Terminbuchung</mark></a></p>
+      </div>
+      <div class="side-card">
+        <h2>Direkt erreichbar</h2>
+        <dl>
+          <div><dt>E-Mail</dt><dd><mark class="todo">[TODO] E-Mail-Adresse</mark></dd></div>
+          <div><dt>Telefon</dt><dd><mark class="todo">[TODO] Telefonnummer</mark></dd></div>
+          <div><dt>Ort</dt><dd>Oelde, Kreis Warendorf. Beratung online und <mark class="todo">[TODO] vor Ort bestätigen</mark></dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+/* Design-Tokens Digitalkonzepte Desel.
+   Farbwelt = Finanzkonzepte Desel (Tannengrün, Graugrün, Stein, Kupfer). Das Logo behält seine eigenen Farben.
+   Kupfer ist nie Textfarbe auf hellem Grund (2,9 : 1 auf Stein): dort gilt --copper-text. */
+:root {
+  /* Marke */
+  --green: #1E3D34;
+  --green-2: #3F5A4E;
+  --sage: #8AA399;
+  --copper: #B5835A;
+  --copper-text: #8A5C38;
+  --copper-light: #D6A57C;
+  --on-copper: #10211B;
+  --on-sage: #10211B;
+
+  /* Flächen und Text */
+  --page: #F2F0EB;
+  --bg: #E4E9E3;
+  --surface: #FFFFFF;
+  --ink: #1E3D34;
+  --ink-2: #3F5A4E;
+  --muted: #4A6458;
+  --line: #D3DCD5;
+  --field: #6F8A7E;
+  --on-green: #F2F0EB;
+  --on-green-muted: #CBD8D1;
+  --copper-soft: rgba(181, 131, 90, .16);
+  --focus: #8A5C38;
+  --err: #9B3A28;
+  --ok: #2F6B4A;
+  --nav-bg: rgba(242, 240, 235, .88);
+  --grid: rgba(30, 61, 52, .085);
+
+  /* Schrift */
+  --font-display: Fraunces, Georgia, "Times New Roman", serif;
+  --font-body: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Abstände (4-Punkt-Raster) */
+  --s-1: .25rem; --s-2: .5rem; --s-3: .75rem; --s-4: 1rem; --s-5: 1.5rem;
+  --s-6: 2rem; --s-7: 3rem; --s-8: 4.5rem; --s-9: 7rem;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+  --maxw: 1180px;
+
+  /* Formen */
+  --radius: 20px;
+  --radius-sm: 12px;
+  --tile-round: 100%; /* Viertelrundung aus dem Logo */
+  --shadow: 0 1px 2px rgba(30, 61, 52, .06), 0 24px 48px -24px rgba(30, 61, 52, .28);
+
+  /* Bewegung */
+  --ease-out: cubic-bezier(.23, 1, .32, 1);
+  --ease-in-out: cubic-bezier(.77, 0, .175, 1);
+  --dur-1: 140ms; --dur-2: 220ms; --dur-3: 280ms;
+
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --page: #0D1A16;
+  --bg: #12241E;
+  --surface: #1A3229;
+  --ink: #F2F0EB;
+  --ink-2: #D5DED9;
+  --muted: #A9BDB4;
+  --line: #2A463B;
+  --copper-text: #D6A57C;
+  --copper-soft: rgba(181, 131, 90, .18);
+  --focus: #D6A57C;
+  --err: #E8806C;
+  --ok: #6FBF8E;
+  --nav-bg: rgba(13, 26, 22, .86);
+  --grid: rgba(242, 240, 235, .07);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 24px 48px -24px rgba(0, 0, 0, .7);
+  color-scheme: dark;
+}

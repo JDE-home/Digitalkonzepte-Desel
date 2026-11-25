@@ -1,0 +1,48 @@
+/* Basis: Reset, Typografie, Buttons, Kopfzeile. Benötigt tokens.css und fonts.css. */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65; color: var(--ink); background: var(--page);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  scrollbar-color: var(--sage) transparent;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-underline-offset: .22em; text-decoration-thickness: 1px; }
+::selection { background: var(--copper); color: var(--on-copper); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.12; letter-spacing: -.015em; text-wrap: balance; }
+h1 { font-size: clamp(2.4rem, 1.2rem + 4.4vw, 4rem); }
+h2 { font-size: clamp(1.9rem, 1.2rem + 2.6vw, 3rem); }
+h3 { font-size: 1.35rem; line-height: 1.25; }
+p { text-wrap: pretty; max-width: 68ch; }
+.lead { font-size: clamp(1.1rem, 1rem + .5vw, 1.3rem); color: var(--muted); max-width: 56ch; line-height: 1.6; }
+.tabular { font-variant-numeric: tabular-nums; }
+
+.wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.skip { position: absolute; left: var(--s-4); top: -4rem; z-index: 100; background: var(--green); color: var(--on-green); padding: .7rem 1.1rem; border-radius: var(--radius-sm); transition: top var(--dur-1); }
+.skip:focus { top: var(--s-4); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 48px; padding: .8rem 1.6rem;
+  border-radius: 999px; border: 2px solid transparent; font: 600 1rem/1.2 var(--font-body); text-decoration: none; cursor: pointer;
+  transition: transform var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out), background-color var(--dur-1), color var(--dur-1);
+  -webkit-tap-highlight-color: transparent;
+}
+.btn:active { transform: scale(.97); }
+.btn-primary { background: var(--copper); color: var(--on-copper); }
+.btn-ghost { border-color: currentColor; color: var(--ink); }
+.btn svg { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform var(--dur-2) var(--ease-out); }
+@media (hover: hover) {
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 24px -14px rgba(16, 33, 27, .55); }
+  .btn-primary:hover svg { transform: translateX(3px); }
+  .btn-ghost:hover { background: var(--ink); color: var(--page); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

@@ -1,0 +1,62 @@
+<section class="page-hero gridbg">
+  <div class="wrap">
+    <h1>Pakete und Preise. <em>Transparent.</em></h1>
+    <p class="lead">Das Grundmodell ist ein Monatsabo: Einrichtung, Hosting und laufende Pflege in einem Preis. Dazu gibt es ein Einstiegsangebot für die KI-Beratung. Stellen Sie sich Ihr Paket zusammen.</p>
+    <p class="stack"><mark class="todo">[TODO] Alle Preise auf dieser Seite sind Platzhalter und müssen ersetzt werden (Zahlen stehen als data-Attribute im HTML dieser Seite).</mark></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <form class="config" data-config>
+      <div>
+        <fieldset>
+          <legend>1. Website</legend>
+          <p class="hint">Im Abo enthalten sind Einrichtung, Hosting und laufende Pflege. Wählen Sie den Umfang.</p>
+          <div class="opts">
+            <div class="opt-wrap"><input type="radio" name="website" id="w-ohne" value="ohne" data-label="Ohne Website-Abo"><label class="opt" for="w-ohne"><b>Ohne Website</b><small>Sie haben bereits eine Website oder brauchen nur KI-Beratung.</small><span class="p">0 €</span></label></div>
+            <div class="opt-wrap"><input type="radio" name="website" id="w-kompakt" value="kompakt" data-monat="49" data-label="Website-Abo Kompakt"><label class="opt" for="w-kompakt"><b>Kompakt</b><small>Bis zu 5 Seiten, Kontaktformular, Hosting und Pflege.</small><span class="p">49 €<small>pro Monat</small></span></label></div>
+            <div class="opt-wrap"><input type="radio" name="website" id="w-standard" value="standard" data-monat="79" data-label="Website-Abo Standard" checked><label class="opt" for="w-standard"><b>Standard</b><small>Bis zu 10 Seiten, regelmäßige Änderungen inklusive.</small><span class="p">79 €<small>pro Monat</small></span></label></div>
+            <div class="opt-wrap"><input type="radio" name="website" id="w-erweitert" value="erweitert" data-monat="129" data-label="Website-Abo Erweitert"><label class="opt" for="w-erweitert"><b>Erweitert</b><small>Bis zu 20 Seiten, mehr Änderungen, bevorzugte Bearbeitung.</small><span class="p">129 €<small>pro Monat</small></span></label></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2. Bausteine für KI</legend>
+          <p class="hint">Beides lässt sich einzeln oder zusammen wählen.</p>
+          <div class="opts check">
+            <div class="opt-wrap"><input type="checkbox" id="b-funktion" value="ki-funktion" data-monat="39" data-label="KI-Funktion für die Website"><label class="opt" for="b-funktion"><b>KI-Funktion für die Website</b><small>Chat-Assistent oder automatisierte Anfragen, laufend betreut.</small><span class="p">39 €<small>pro Monat</small></span></label></div>
+            <div class="opt-wrap"><input type="checkbox" id="b-beratung" value="ki-beratung" data-einmal="290" data-label="KI-Einstiegsberatung"><label class="opt" for="b-beratung"><b>KI-Einstiegsberatung</b><small>Potenzialanalyse, Empfehlung und erste Einführung der Werkzeuge.</small><span class="p">290 €<small>einmalig</small></span></label></div>
+          </div>
+        </fieldset>
+      </div>
+
+      <aside class="summary" aria-labelledby="summe-titel">
+        <h2 id="summe-titel">Ihre Auswahl</h2>
+        <div aria-live="polite" aria-atomic="true">
+          <dl>
+            <div><dt>Monatlich</dt><dd data-sum-monat>0 €</dd></div>
+            <div><dt>Einmalig</dt><dd data-sum-einmal>0 €</dd></div>
+          </dl>
+        </div>
+        <ul class="chosen" data-chosen></ul>
+        <a class="btn btn-primary" href="/kontakt" data-config-cta>Mit dieser Auswahl anfragen</a>
+        <p class="fine">Unverbindliche Richtwerte. Den genauen Umfang und den Preis legen wir im Erstgespräch fest. Kein Ausweis der Umsatzsteuer gemäß § 19 UStG (Kleinunternehmerregelung). <mark class="todo">[TODO] Wortlaut „netto“ rechtlich prüfen</mark></p>
+      </aside>
+    </form>
+  </div>
+</section>
+
+<section class="section section-alt" aria-labelledby="faq-titel">
+  <div class="wrap">
+    <div class="section-head"><h2 id="faq-titel">Häufige Fragen.</h2></div>
+    <div class="faq">
+      <details><summary>Was ist im Website-Abo enthalten?</summary><div class="answer"><p>Einrichtung, Hosting, laufende Pflege und Aktualisierungen. Der genaue Umfang steht vorab im Angebot. <mark class="todo">[TODO] Leistungsumfang je Paket festlegen</mark></p></div></details>
+      <details><summary>Gibt es eine Mindestlaufzeit?</summary><div class="answer"><p><mark class="todo">[TODO]</mark> Laufzeit und Kündigungsfrist festlegen und hier erklären.</p></div></details>
+      <details><summary>Gehört mir die Website, wenn ich kündige?</summary><div class="answer"><p><mark class="todo">[TODO]</mark> Regelung zu Inhalten, Domain und Übergabe festlegen.</p></div></details>
+      <details><summary>Was kostet KI-Beratung nach dem Einstieg?</summary><div class="answer"><p><mark class="todo">[TODO]</mark> Folgeangebote und Stundensatz festlegen. Im Erstgespräch besprechen wir, was bei Ihnen überhaupt sinnvoll ist.</p></div></details>
+      <details><summary>Wird Umsatzsteuer berechnet?</summary><div class="answer"><p>Nein. Ich wende die Kleinunternehmerregelung nach § 19 UStG an und weise daher keine Umsatzsteuer aus. <mark class="todo">[TODO] Formulierung prüfen lassen</mark></p></div></details>
+    </div>
+  </div>
+</section>
+
+{{include:cta-band}}

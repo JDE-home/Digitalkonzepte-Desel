@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero C – Dunkel</title>
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/base.css">
+<style>
+/* Variante C: Tannengrün-Fläche, große Typografie, das Logo-Raster als angeschnittene Grafik. */
+body { background: var(--green); }
+.site-header { background: rgba(30, 61, 52, .9); border-bottom-color: rgba(242, 240, 235, .14); }
+.logo { background: #fff; padding: 6px 12px; border-radius: 10px; }
+.nav { color: var(--on-green); }
+.nav .btn-primary { color: var(--on-copper); }
+.hero { position: relative; color: var(--on-green); padding: clamp(3.5rem, 9vw, 8rem) 0 0; overflow: clip; }
+.hero .wrap { position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(2.4rem, 1rem + 5vw, 4.8rem); max-width: 12ch; letter-spacing: -.025em; }
+.hero h1 em { font-style: normal; color: var(--copper-light); }
+.hero .lead { color: var(--on-green-muted); margin-top: var(--s-6); }
+.cta { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-top: var(--s-7); }
+.hero .btn-ghost { color: var(--on-green); }
+@media (hover: hover) { .hero .btn-ghost:hover { background: var(--on-green); color: var(--green); } }
+
+/* Angeschnittenes Raster */
+.mark { position: absolute; z-index: 0; right: clamp(-6rem, -5vw, -1rem); top: 46%; width: clamp(280px, 37vw, 540px); aspect-ratio: 289 / 301; transform: translateY(-46%); display: grid; grid-template-columns: 135fr 144fr; grid-template-rows: 143fr 148fr; gap: 10px; opacity: .95; }
+.mark i { display: block; }
+.mark .a { background: var(--green-2); }
+.mark .b { background: var(--copper); border-top-right-radius: 100%; }
+.mark .c { background: #16302A; box-shadow: inset 0 0 0 2px rgba(242, 240, 235, .14); }
+.mark .d { background: var(--sage); border-bottom-right-radius: 100%; opacity: .85; }
+@media (prefers-reduced-motion: no-preference) { .mark i { animation: slide 1s var(--ease-out) both; } .mark .b { animation-delay: 90ms; } .mark .c { animation-delay: 170ms; } .mark .d { animation-delay: 250ms; } @keyframes slide { from { opacity: 0; transform: translateY(18px); } } }
+
+.strip { position: relative; z-index: 2; margin-top: clamp(3rem, 8vw, 7rem); border-top: 1px solid rgba(242, 240, 235, .18); background: #172F28; }
+.strip .wrap { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: var(--s-3); }
+.strip p { padding: var(--s-5) var(--s-5) var(--s-5) 0; color: var(--on-green); font-weight: 500; font-size: .98rem; max-width: none; }
+.strip p + p { padding-left: var(--s-5); border-left: 1px solid rgba(242, 240, 235, .18); }
+.strip span { display: block; color: var(--on-green-muted); font-weight: 400; font-size: .9rem; margin-top: .15rem; }
+@media (max-width: 760px) { .strip .wrap { grid-template-columns: 1fr; } .strip p + p { padding-left: 0; border-left: 0; border-top: 1px solid rgba(242, 240, 235, .18); } .mark { opacity: .35; right: -30%; } .hero h1 { max-width: 11ch; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Digitalkonzepte Desel, Startseite"><img src="/assets/img/logo.png" alt="Digitalkonzepte Desel" width="175" height="40"></a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="#">Leistungen</a><a href="#">Pakete &amp; Preise</a><a href="#">Über mich</a><a href="#">Referenzen</a><a href="#">Kontakt</a>
+      <a class="btn btn-primary" href="#">Erstgespräch</a>
+    </nav>
+  </div>
+</header>
+<main id="inhalt">
+  <section class="hero">
+    <div class="mark" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i></div>
+    <div class="wrap">
+      <h1>Weniger Technik&shy;stress. <em>Mehr Zeit</em> fürs Geschäft.</h1>
+      <p class="lead">Websites und künstliche Intelligenz für kleine Unternehmen: Ich baue, betreibe und erkläre beides, persönlich und ohne Fachchinesisch.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#">Erstgespräch vereinbaren <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#">Leistungen ansehen</a>
+      </div>
+    </div>
+    <div class="strip">
+      <div class="wrap">
+        <p>Ein Ansprechpartner<span>für Website und KI</span></p>
+        <p>Transparente Preise<span>Monatsabo, [TODO Details]</span></p>
+        <p>Aus Oelde<span>für ganz Deutschland</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
