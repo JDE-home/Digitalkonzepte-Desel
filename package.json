@@ -1,0 +1,13 @@
+{
+  "name": "desel-digitalkonzepte",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "resend": "^6.39.0",
+    "zod": "^4.6.7"
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

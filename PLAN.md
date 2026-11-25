@@ -1,6 +1,7 @@
 # Plan: Website „Digitalkonzepte Desel“
 
-Stand: Entwurf zur Freigabe. Es wurde noch **kein Code** geschrieben, nichts installiert, nichts auf Vercel/GitHub angelegt.
+Stand: **freigegeben** (alle acht Empfehlungen aus Abschnitt 10 angenommen). Farbwelt: **Finanzkonzepte** (nicht die Logo-Farben).
+Phase 0 (Skills, Grundgerüst) und Phase 1 (Fundament, drei Hero-Varianten) sind umgesetzt. Offen: Auswahl der Hero-Richtung.
 
 ---
 
@@ -26,6 +27,8 @@ Gelesen aus dem Repo `JDE-home/Desel-Finanzkonzepte` (privat) und der Vercel-Pro
 ---
 
 ## 2. Logo und Farben
+
+> **Entscheidung:** Die Website nutzt die **Farbwelt der Finanzkonzepte-Seite** (Tannengrün `#1E3D34`, Graugrün `#8AA399`, Stein `#F2F0EB`, Kupfer `#B5835A`, Text `#3F5A4E`). Das Logo bleibt unverändert und behält seine eigenen Farben (wie bei Finanzkonzepte). Die Tokens liegen in `assets/css/tokens.css`. Die folgende Messung der Logo-Farben bleibt als Referenz stehen.
 
 Das Logo (vier Flächen als „D“ + Schriftzug „Digitalkonzepte **Desel**“) liegt vor. Das ersetzt die geplante Platzhalter-Wortmarke. Die Datei ist eine WebP mit weißem Hintergrund (1774 × 887 px) und muss noch freigestellt bzw. als SVG nachgebaut werden.
 
@@ -126,7 +129,8 @@ Skip-Link · Header (Logo, Navigation, CTA, Hell/Dunkel-Schalter, mobiles Menü 
 
 - **Signatur-Motiv:** das 2×2-Kachelraster mit der einen Viertelrundung aus dem Logo als Layout- und Illustrationsprinzip (Bento-artige Raster, „Website + KI“ als zusammengesetzte Kacheln).
 - Große, ruhige Typografie, viel Weißraum, Kupfer sparsam. Kein Violett, kein Neon-Glow, keine Chrome-Gradienten.
-- **Schrift-Vorschlag:** Fraunces für Überschriften (Familienband zu Finanzkonzepte), Inter für Text, dazu eine dezente Monospace für „Tech“-Details (Zahlen, Labels). Endgültig nach Prüfung mit Impeccable `typeset` und UI-UX-Pro-Max-Schriftsuche. Alles lokal.
+- **Schrift:** Fraunces für Überschriften, Inter für Text, identisch zu Finanzkonzepte (Familienband), alles lokal. Eine Monospace als „Tech“-Kostüm entfällt (Impeccable lehnt das ab, nur für echten Code oder Daten sinnvoll). Der Detektor meldet Inter und Fraunces als häufig. Das ist als Markenschrift bewusst akzeptiert und in `.impeccable/config.json` begründet.
+- **Bewusst anders als Finanzkonzepte:** keine Eyebrow-Zeilen über Überschriften, keine gleichförmigen Icon-Kacheln als Seitenstruktur, keine Kennzahlen-Kacheln, keine endlos schwebenden Elemente.
 - **Bewegung:** nur CSS, Eintrittsanimationen < 300 ms mit `ease-out`, vollständig abgeschaltet bei `prefers-reduced-motion`, keine Animationsbibliothek.
 - Performance-Budget: Lighthouse ≥ 95, kein Layout-Shift, Schriften vorgeladen, Bilder `webp`/`avif` mit Maßen.
 
@@ -214,13 +218,15 @@ PRODUCT.md, DESIGN.md, README.md
 
 ---
 
-## 10. Offene Entscheidungen (mit meiner Empfehlung)
+## 10. Entscheidungen (alle bestätigt)
 
-1. **Include-Skript (Build-Schritt) ja oder nein?** Empfehlung: ja, minimal und ohne Abhängigkeiten.
-2. **Dunkelmodus** wie bei Finanzkonzepte? Empfehlung: ja (Tokens machen es billig), aber Logo auf heller Unterlage.
-3. **GitHub-Repo ist öffentlich.** Das ist ok für Code, aber Entwürfe, Plan und Kommentare sind dann einsehbar. Empfehlung: bis zum Livegang auf **privat** stellen.
-4. **Domain mit oder ohne `www`?** Empfehlung: ohne `www` als Hauptdomain (kürzer), `www` leitet um.
-5. **Querverweis zur Finanzkonzepte-Seite im Footer?** Empfehlung: nur nach Abstimmung, weil beide Angebote getrennt auftreten.
-6. **„LangDoc“ = Langdock?** Ich gehe von **Langdock** aus (KI-Plattform aus Deutschland mit Assistenten, Integrationen und API). Bitte bestätigen.
-7. **Schema-Adresse:** nur Ort/PLZ (Empfehlung) oder volle Anschrift?
-8. **Impressum/Datenschutz:** Gibt es für die neue Domain ein eigenes Postfach oder läuft es über das bestehende?
+1. Include-Skript für Kopf/Fuß: **ja**.
+2. Dunkelmodus: **ja**, Logo dann auf heller Unterlage.
+3. Repo bis zum Livegang **privat** stellen: **ja**. Umstellen kann nur der Repo-Inhaber in den GitHub-Einstellungen (Settings → General → Danger Zone → Change visibility). `CONTACT_TO` steht in jedem Fall nur in der Umgebungsvariable.
+4. Hauptdomain **ohne** `www`, `www` leitet um: **ja**.
+5. „LangDoc“ = **Langdock**: **ja**.
+6. Schema-Adresse nur Ort/PLZ, ohne Straße: **ja**.
+7. Postfach für die neue Domain: noch zu klären (E-Mail im Impressum, `CONTACT_TO`).
+8. Querverweis zur Finanzkonzepte-Seite im Footer: **nein**, vorerst.
+
+Zusätzlich: **Farbwelt = Finanzkonzepte** (siehe Abschnitt 2).
