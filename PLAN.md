@@ -1,7 +1,7 @@
 # Plan: Website „Digitalkonzepte Desel“
 
 Stand: **freigegeben** (alle acht Empfehlungen aus Abschnitt 10 angenommen). Farbwelt: **Finanzkonzepte** (nicht die Logo-Farben).
-Phase 0 (Skills, Grundgerüst) und Phase 1 (Fundament, drei Hero-Varianten) sind umgesetzt. Offen: Auswahl der Hero-Richtung.
+Umgesetzt: Phase 0 bis 4 (Skills, Fundament, alle Seiten, Formular, Rechtsentwürfe, SEO, Tests). Gewählt: Hero A (Raster), Chat-Demo als Abschnitt auf „Leistungen“, Richtung „präzise-technisch“, Paket-Konfigurator. Offen: Phase 5 (Vercel, Domain, Resend) und die `[TODO]`-Inhalte.
 
 ---
 

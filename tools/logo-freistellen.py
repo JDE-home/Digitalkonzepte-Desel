@@ -31,7 +31,7 @@ bbox = img.getchannel("A").point(lambda v: 255 if v > 8 else 0).getbbox()
 logo = img.crop(bbox)
 print("Logo-Ausschnitt:", bbox, logo.size)
 logo.save("assets/img/logo-full.png")
-w = 960; logo.resize((w, round(logo.height * w / logo.width)), Image.LANCZOS).save("assets/img/logo.png", optimize=True)
+w = 640; logo.resize((w, round(logo.height * w / logo.width)), Image.LANCZOS).save("assets/img/logo.png", optimize=True)
 # Zeichen: linker Teil bis zum Ende der Rundung
 a = np.asarray(img.getchannel("A")); cols = np.where((a > 8).any(0))[0]
 gaps = np.where(np.diff(cols) > 40)[0]

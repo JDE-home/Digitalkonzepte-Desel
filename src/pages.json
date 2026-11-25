@@ -1,0 +1,57 @@
+[
+  {
+    "slug": "index", "file": "index.html", "path": "/",
+    "title": "Digitalkonzepte Desel – Websites und KI für kleine Betriebe",
+    "description": "Websites im Monatsabo und KI-Beratung aus einer Hand: persönlich, pragmatisch und transparent. Digitalkonzepte Desel aus Oelde für kleine Unternehmen.",
+    "scripts": ["hero.js"]
+  },
+  {
+    "slug": "leistungen", "file": "leistungen.html", "path": "/leistungen", "nav": "Leistungen",
+    "title": "Leistungen: Websites und KI-Beratung",
+    "description": "Website-Erstellung mit Hosting und Pflege, KI-Beratung mit Schulung und KI-Funktionen für Ihre Website wie Chat-Assistent und automatisierte Anfragen.",
+    "scripts": ["chat-demo.js"]
+  },
+  {
+    "slug": "pakete-preise", "file": "pakete-preise.html", "path": "/pakete-preise", "nav": "Pakete & Preise", "crumb": "Pakete und Preise",
+    "title": "Pakete und Preise: Website-Abo und KI-Beratung",
+    "description": "Website im Monatsabo mit Einrichtung, Hosting und Pflege plus Einstiegsangebot für die KI-Beratung. Stellen Sie Ihr Paket zusammen und sehen Sie die Monatssumme.",
+    "scripts": ["configurator.js"]
+  },
+  {
+    "slug": "ueber-mich", "file": "ueber-mich.html", "path": "/ueber-mich", "nav": "Über mich", "crumb": "Über mich",
+    "title": "Über mich: Jannik Desel aus Oelde",
+    "description": "Jannik Desel aus Oelde: ein persönlicher Ansprechpartner für Website und KI in kleinen Unternehmen. Erfahren Sie, wie ich arbeite und was mir wichtig ist."
+  },
+  {
+    "slug": "referenzen", "file": "referenzen.html", "path": "/referenzen", "nav": "Referenzen",
+    "title": "Referenzen und Projekte",
+    "description": "Ausgewählte Projekte von Digitalkonzepte Desel: Websites und KI-Lösungen für kleine Unternehmen. Hier entsteht die Referenzübersicht."
+  },
+  {
+    "slug": "kontakt", "file": "kontakt.html", "path": "/kontakt", "nav": "Kontakt",
+    "title": "Kontakt und Erstgespräch",
+    "description": "Vereinbaren Sie ein kostenloses Erstgespräch zu Website und KI für Ihr Unternehmen: per Kontaktformular oder direkter Terminbuchung.",
+    "scripts": ["contact.js"]
+  },
+  {
+    "slug": "webdesign-ki-beratung-oelde", "file": "webdesign-ki-beratung-oelde.html", "path": "/webdesign-ki-beratung-oelde", "crumb": "Webdesign und KI-Beratung in Oelde",
+    "title": "Webdesign und KI-Beratung in Oelde",
+    "description": "Webdesign, Hosting und KI-Beratung in Oelde und im Kreis Warendorf: ein persönlicher Ansprechpartner für Ihre Website und den Einsatz von KI im Betrieb.",
+    "og": "og-oelde.png"
+  },
+  {
+    "slug": "impressum", "file": "impressum.html", "path": "/impressum", "crumb": "Impressum",
+    "title": "Impressum",
+    "description": "Impressum von Digitalkonzepte Desel, Jannik Desel, Oelde. Angaben gemäß § 5 Digitale-Dienste-Gesetz (Entwurf)."
+  },
+  {
+    "slug": "datenschutz", "file": "datenschutz.html", "path": "/datenschutz", "crumb": "Datenschutzerklärung",
+    "title": "Datenschutzerklärung",
+    "description": "Datenschutzerklärung von Digitalkonzepte Desel: Hosting bei Vercel, Kontaktformular über Resend, keine Cookies und kein Tracking (Entwurf)."
+  },
+  {
+    "slug": "404", "file": "404.html", "path": "/404", "noindex": true,
+    "title": "Seite nicht gefunden",
+    "description": "Diese Seite gibt es nicht. Zurück zur Startseite von Digitalkonzepte Desel."
+  }
+]
